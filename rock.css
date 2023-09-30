@@ -1,0 +1,393 @@
+body{
+    background-color: hsl(227.734, 48%, 19%)   ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*المربع يلي بيحوي كلشي*/
+  
+    div{
+    
+    position: relative;
+    width: 750px;
+    height: 570px;
+    background-color:hsl(227.734, 48%, 19%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/*مربع لوغو اللعبة والنتيجة*/
+a{
+  
+    position: absolute;
+    border:solid 2px hsl(217, 16%, 45%);
+    width:480px;
+    height: 170px;
+    top:10px;
+    border-radius: 20px;
+}
+/*مربع النقاط*/
+points{
+    position: absolute;
+    width:140px;
+    height: 130px;
+    background-color: white;
+    border:solid 1px white;
+    border-radius: 10px;
+    right: 15px;
+    top:16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*score الكتابة */
+#score{
+    position: absolute;
+    font-size: 22px;
+    top:20px;
+     color:hsl(229, 64%, 46%);
+    font-family: 'Barlow Semi Condensed' ,sans-serif;
+}
+/*لوغو اللعبة*/
+#logo{
+    position: absolute;
+    left:20px;
+    top:20px;
+    width:190px;
+    height: 128px;
+}
+/*عدد النقاط*/
+#yourpoints{
+    position: absolute;
+    color: hsl(229, 25%, 31%);
+    bottom: 20px;
+    font-size: 45px;
+    font-family: 'Barlow Semi Condensed' ,sans-serif;
+}
+/*مربع الحجرة ورقة مقص*/
+k{  visibility: visible;
+    width: 480px;
+    height: 350px;
+    margin-top: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*صورة المثلث يلي احت الحجرة ورقة مقص*/
+#photo{
+   position:absolute;
+    width: 250px;
+    height: 220px;
+    margin-top: 30px;
+}
+/*لزرار الحجرة ورقة مقص*/
+.buttons{
+    position: absolute;
+   z-index: 5;
+    width: 140px;
+    height: 140px;
+    border-radius: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* زر الحجؤة*/
+#rock1{
+    border: solid 1px  hsl(349, 70%, 56%);
+    background-color:  hsl(349, 70%, 56%);
+    margin-right:10px ;
+    margin-top: 170px;
+}
+/*زر الورقة*/
+#paper1{
+    border:solid 1px hsl(230, 89%, 62%) ;
+    background-color: hsl(230, 89%, 62%);
+    margin-top:-180px;
+    margin-right: 250px;
+}
+/*زر المقص*/
+#sci1{
+    border: solid 1px  hsl(40, 84%, 53%);
+    background-color:  hsl(40, 84%, 53%);
+    margin-top: -180px;
+    margin-left:250px ;
+    
+}
+/*اللون الابيض الموجود جوا الازرار*/
+lo{
+    width:100px;
+    height: 100px;
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}/* زر القوانين*/
+#rules{
+    position: absolute;
+    top: 550px;
+    right: 100px;
+    width: 100px;
+    height: 35px;
+    padding: center;
+    font-size: 14px;
+    font-family:sans-serif;
+    color: white;
+    border: solid 1px white;
+    border-radius: 6px;
+    background-color: hsl(227.734, 48%, 19%);
+}
+/*زر القوانين للموبايل*/
+#mobile_rules{
+    visibility: hidden;
+}
+/*صورة قوانين اللعبة*/
+#rules1{
+    position: absolute;
+    z-index: 10;
+}
+/*مربع قوانين اللعبة*/
+o{ visibility: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+    position: absolute;
+    background-color: white;
+    border:solid 1px white;
+    border-radius:10px;
+    width: 390px;
+    height: 340px;
+    margin-top: 210px;
+
+}
+/*زر اغلاق القوانين*/
+#rules2{
+    position: absolute;
+    right: 8px;
+    top:8px;
+    border: solid 1px white;
+    background-color: white;
+}
+/*صورة اكس اغلاق اللعبة الموجودة على الزر*/
+#close{
+    width:20px;
+    height: 20px;
+    background-color: white;
+}
+/*مربع بعد اختيار الزر*/
+#result_page{
+    visibility: hidden;
+    position: absolute;
+    width:740px;
+    height: 360px;
+    margin-top: 200px;
+   
+    
+}
+/*الازرار التي اخترناها والازرار التي اختارها الكمبيوتر*/
+#roc1,#roc2{ 
+    visibility: hidden;
+    border: solid 1px  hsl(349, 70%, 56%);
+    background-color:  hsl(349, 70%, 56%);
+
+}
+#pape1,#pape2{
+    visibility: hidden;
+    border:solid 1px hsl(230, 89%, 62%) ;
+    background-color: hsl(230, 89%, 62%);
+}
+#sc1,#sc2{
+    visibility: hidden;
+    border: solid 1px  hsl(40, 84%, 53%);
+    background-color:  hsl(40, 84%, 53%);
+}
+#sc1,#pape1,#roc1{
+    margin-top: 110px;
+    margin-left: 70px;
+}
+#sc2,#pape2,#roc2{
+ 
+    margin-top: 110px;
+    margin-left: 500px;
+}
+/*انت اخترت + المنزل اختار كلمات*/
+pi{position: absolute;
+    color: white;
+    font-family: 'Barlow Semi Condensed' ,sans-serif;
+    font-size: 28px;
+    margin-top: 60px;
+}
+#house_picked
+{
+    margin-left: 460px;
+}
+#you_picked{
+    margin-left: 74px;
+}
+/*جملة النتيجة*/
+#end_result{
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+    font-size:33px;
+    margin-left: 267px;
+    margin-top: 150px; 
+}
+/*زر اللعب مرة اخرى*/
+#button_playagain{
+    position: absolute;
+    visibility: hidden;
+    font-size: 14px;
+    width: 160px;
+    height: 40px;
+     color:hsl(229, 64%, 46%);
+    font-family: sans-serif;
+    border: solid 1px white;
+    background-color: white;
+    padding: center;
+    margin-top: 225px;
+    margin-left: 274px;
+    border-radius: 5px;
+ }
+ /*ظل اختيار الكمبيوتر*/
+ #wait{
+    
+    background-color: hsl(237, 49%, 15%);
+    border: 1px solid hsl(237, 49%, 15%);
+    margin-top: 140px;
+    margin-left: 535px;
+
+}
+
+ @media only screen and (max-width:450px){
+     div{
+        width:320px ;
+        height:620px ;
+     }
+     a{
+         width: 310px;
+         height: 185px;
+      }
+         points{
+         width:100px;
+         right: 10px;
+         height: 135px;
+      }
+     #score{
+        font-size: 15px;
+        margin-top: 5px;
+     }
+     #yourpoints{
+         font-size: 40px;
+         bottom: 24px;
+           }
+     #logo{
+         width:140px;
+         height: 150px;
+      }
+     k{
+          width: 310px;
+          height: 390px;
+          margin-top: 210px;
+         
+        }
+     #photo{margin-top: -10px;
+          width:180px;
+            }
+     .buttons{
+          width:100px;
+          height: 100px;
+          }
+     lo{
+          width:75px;
+          height: 75px;
+            }
+     #rules{
+         
+          visibility: hidden;
+          
+            }
+     #mobile_rules{
+          visibility: visible;
+          position: absolute;
+          margin-top: 350px;
+          width: 80px;
+          height: 30px;
+          padding: center;
+          font-size: 14px;
+          font-family:sans-serif;
+          color: white;
+          border: solid 1px white;
+          border-radius: 4px;
+          background-color: hsl(227.734, 48%, 19%);}
+          
+
+ #rock1{
+    margin-top: 120px;
+ }
+ #paper1{
+margin-right:190px ;
+margin-top:-230px;
+ }
+ #sci1{margin-left: 190px;
+margin-top: -230px;}
+ #sci3,#paper3,#rock3{
+    width:43px;
+ 
+ }
+o{
+    width:300px;
+    height: 390px;
+}
+#rules1{
+    z-index: 6;
+    margin-top: 30px;
+    width: 260px;
+    height: 300px;
+}
+#result_page{
+    z-index: 1;
+    visibility: hidden;
+    width:310px;
+    height: 390px;
+}
+#sc1,#pape1,#roc1{
+    margin-top: 45px;
+    margin-left: 15px;
+}
+#sc2,#pape2,#roc2{
+ 
+    margin-top: 50px;
+    margin-left: 175px;
+}
+pi{
+    font-size:13px;
+    margin-top: 175px;
+}
+#you_picked{
+    margin-left: 35px;
+
+}
+#house_picked{
+    margin-left: 175px;
+}
+#end_result{
+    font-size: 30px;
+    margin-top: 245px;
+    margin-left: 62px;
+}
+#button_playagain{
+    margin-left: 55px;
+    margin-top: 300px;
+    font-size: 13px;
+    width: 155px;
+    height: 40px;
+}
+#wait{
+    margin-top: 53px;
+    margin-left: 180px;
+}
+}

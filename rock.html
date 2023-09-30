@@ -1,0 +1,208 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="rock.css">
+        <title>rock</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Fraunces:opsz,wght@9..144,800;9..144,900&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <a>
+                 <img src="log.svg" id="logo" />
+                 <points>
+                     <b id="score">S C O R E</b>
+                     <c id="yourpoints">0</c>
+                 </points>
+            </a>
+            <k id="main_page">
+                <img src="bg-triangle.svg" id="photo" />
+                <button id="rock1" class="buttons" onclick="result(1);"> 
+                  <lo id="rock2" >
+                    <img src="rock.svg" id="rock3">
+                  </lo>
+                </button>
+                <button  id="paper1" class="buttons" onclick="result(2);">
+                    <lo id="paper2">
+                      <img src="icon-paper.svg" id="paper3">
+                    </lo>
+                </button>
+                <button id="sci1" class="buttons" onclick="result(3);">
+                    <lo id="sci2">
+                      <img src="icon-scissors.svg" id="sci3">
+                    </lo>
+                </button>
+                <button id="mobile_rules" onclick="rules();">RULES</button>
+            </k>
+            <o id="oo">
+              <button id="rules2"><img src="icon-close.svg" id="close" onclick="close_rulse();"></button>
+                <img src="image-rules.svg" id="rules1" />
+              
+            </o>
+            <ii id="result_page">
+              <pi id="you_picked">YOU PICKED</pi>
+              <pi id="house_picked">THE HOUSE PICKED</pi>
+              
+               <er id="end_result"></er>
+               <button id="button_playagain" onmouseout="playagian_button2();" onmousemove="playagian_button1();" onclick="replay();">PLAY AGAIN</button>
+               
+               <button id="sc1" class="buttons">
+                <lo id="sci2">
+                  <img src="icon-scissors.svg" id="sci3">
+                </lo>
+            </button>
+            <button id="sc2" class="buttons">
+              <lo id="sci2">
+                <img src="icon-scissors.svg" id="sci3">
+              </lo>
+          </button> 
+          <button id="roc1" class="buttons"> 
+            <lo id="rock2" >
+              <img src="rock.svg" id="rock3">
+            </lo>
+          </button>
+          <button  id="pape1" class="buttons">
+              <lo id="paper2">
+                <img src="icon-paper.svg" id="paper3">
+              </lo>
+              <button id="roc2" class="buttons"> 
+                <lo id="rock2" >
+                  <img src="rock.svg" id="rock3">
+                </lo>
+              </button>
+              <button  id="pape2" class="buttons">
+                  <lo id="paper2">
+                    <img src="icon-paper.svg" id="paper3">
+                  </lo>
+              </button>
+          </button>
+          <lo id="wait"></lo>
+         </ii>
+        </div>
+        <button id="rules" onclick="rules();">RULES</button>
+        <script>
+          var x=0;
+         function rules(){
+          document.getElementById('oo').style.visibility = 'visible';
+         }
+         function close_rulse(){
+          document.getElementById('oo').style.visibility = 'hidden';
+
+         }
+         function result(x){
+          document.getElementById("mobile_rules").style.visibility= 'hidden';
+          var y= Math.floor((Math.random()*10)+1);
+          y=y%3;
+          y=y+1;
+          choose(x);
+
+          setTimeout(choose_house,1000,y);
+           if(x==2)
+          {  if(y==1) setTimeout(win,1500);
+            else if(y==3) setTimeout(lose,1500);
+            else setTimeout(draw,1500);
+            
+          }
+          else if(x==1)
+          {
+            if(y==1)
+            setTimeout(draw,1500);
+           else if(y==2)
+           setTimeout(lose,1500);
+          else setTimeout(win,1500);}
+          else {
+            if(y==1) setTimeout(lose,1500);
+            else if(y==2) setTimeout(win,1500);
+            else setTimeout(draw,1500);
+          
+          }     
+          
+          if(x>9){document.getElementById("yourpoints").style.marginLeft = '10px';}
+          setTimeout(showplay_again,2000);
+         }
+         var o=end_result.offsetLeft;
+        
+         function win(){
+          if(o>=260)  document.getElementById("end_result").style.marginLeft = '279px';
+          else document.getElementById("end_result").style.marginLeft = '70px';
+          window.end_result.innerHTML = 'YOU WIN';
+          x=x+1;
+          window.yourpoints.innerHTML = x;
+         }
+         function lose(){
+          if(o>=260)  document.getElementById("end_result").style.marginLeft = '268px';
+          else document.getElementById("end_result").style.marginLeft = '63px';
+          window.end_result.innerHTML = 'YOU LOSE';
+         }
+         function draw(){
+          if(o>=265)  document.getElementById("end_result").style.marginLeft = '300px';
+          else document.getElementById("end_result").style.marginLeft = '92px';
+          window.end_result.innerHTML = 'DRAW';
+         
+
+         }
+
+
+
+         function playagian_button1(){
+         document.getElementById("button_playagain").style.color = 'hsl(349, 70%, 56%)';
+         }
+         function playagian_button2(){
+         document.getElementById("button_playagain").style.color = 'hsl(229, 64%, 46%)';
+         }
+         function replay(){
+          hidden();
+          document.getElementById('result_page').style.visibility = 'hidden';
+          document.getElementById('main_page').style.visibility = 'visible';
+          window.end_result.innerHTML = '';
+          document.getElementById("mobile_rules").style.visibility= 'visible';
+          
+         }
+         function choose(x){
+          document.getElementById('main_page').style.visibility = 'hidden';
+          document.getElementById('result_page').style.visibility = 'visible';
+          if(x==1) 
+          {
+          document.getElementById("roc1").style.visibility= 'visible';
+          }
+          else if(x==2)
+          {
+          document.getElementById("pape1").style.visibility= 'visible';
+          }
+          else if(x==3) {
+            document.getElementById("sc1").style.visibility= 'visible';
+          }
+         }
+         function choose_house(x){ 
+         if(x==1) 
+          {
+          document.getElementById("roc2").style.visibility= 'visible';
+          }
+          else if(x==2)
+          {
+          document.getElementById("pape2").style.visibility= 'visible';
+          }
+          else (x==3) 
+            document.getElementById("sc2").style.visibility= 'visible';
+          
+         }
+         function hidden(){
+          document.getElementById("sc2").style.visibility= 'hidden';
+          document.getElementById("roc2").style.visibility= 'hidden';
+          document.getElementById("pape2").style.visibility= 'hidden';
+          document.getElementById("sc1").style.visibility= 'hidden';
+          document.getElementById("roc1").style.visibility= 'hidden';
+          document.getElementById("pape1").style.visibility= 'hidden';
+          document.getElementById('button_playagain').style.visibility = 'hidden';
+
+         } 
+         function showplay_again(){
+          document.getElementById("button_playagain").style.visibility = 'visible';
+          
+
+         }
+         
+        </script>
+    </body>
+</html>
